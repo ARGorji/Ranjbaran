@@ -1,0 +1,420 @@
+﻿.cHidden
+{
+	visibility:hidden;
+	display:none;
+}
+
+.cGridLoading
+{
+	text-align:center;
+	background-image:url('../images/Browse/LoadingProgressBar.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+	width:215px;
+	height:13px;
+	background-color:White;	
+}
+
+.cExportToExcel
+{
+	text-align:center;
+	background-image:url('../images/Browse/excel_export.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+	width:20px;
+	height:20px;	
+	cursor:pointer;
+}
+
+.ctblExcelExported
+{
+	direction:rtl;
+}
+
+.cVisible
+{
+	visibility:visible;
+	/*display:block;*/
+}
+
+.ExportPanelVisible
+{
+	visibility:visible;
+	display:block;
+	position:absolute;
+	z-index:2000;
+}
+
+.ExportPanelHidden
+{
+	visibility:hidden;
+	display:none;
+	position:absolute;
+}
+
+table.cFieldListTable
+{
+	border-collapse:collapse;
+	border: 1px solid #D1D1D1;
+}
+
+table.cFieldListTable td {
+	direction:rtl;
+	padding: 2px;
+	background-image:url('../images/Browse/FilterCell.jpg');
+	cursor:pointer;
+}
+
+.ExportSelection
+{
+	font-size:14pt;
+}
+
+TABLE.cFieldListTable {
+	BORDER-RIGHT: #d1d1d1 1px solid; BORDER-TOP: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-COLLAPSE: collapse
+}
+
+table.VistaGrid {
+	border-collapse: collapse;
+	margin: 0 auto;
+	font-size: 11px;
+	line-height: 19px;
+	/*border: 1px solid #C4DAD4;*/
+	direction:rtl;
+/*	background-color:#FCFCFC;*/
+}
+
+table.VistaGrid th {
+	color: #fff;
+	text-align: center;
+	background-image:url('../images/Browse/headerBg1.gif');
+	background-position:bottom;
+	height:22px;
+}
+
+table.VistaGrid tr{
+}
+
+table.VistaGrid td.over{
+	background: #F1F1F1;
+	background-image:url('../images/Browse/GridCellOver.gif');
+}
+
+table.cFilterTable
+{
+	border-collapse:collapse;
+	border: 1px solid #D1D1D1;
+}
+table.cFilterTable td {
+	direction:rtl;
+	padding: 2px;
+	background-image:url('../images/Browse/FilterCell.jpg');
+	cursor:pointer;
+}
+
+.cGridHeader
+{
+	font-family:Tahoma;
+	font-size:9pt;
+	color:black;
+	cursor:pointer;
+	background-image:url('../images/Browse/headerBg1.gif');
+	border:solid 1px #D6D6D6;
+	background-position:bottom;
+	background-repeat:repeat-x;
+	height:22px;
+	padding:3px;
+/*	
+    width:95%;
+    padding-right:2px;
+	height:22px;*/
+}
+
+.cGridFilter
+{
+	font-family:Tahoma;
+	font-size:10pt;
+	color:black;
+	cursor:pointer;
+	background-color:White;
+	/*background-image:url('../images/Browse/headerBg1.gif');*/
+	background-position:bottom;
+	background-repeat:repeat-x;
+	text-align:right;
+	
+}
+
+.GridTDOver /*grid's over on rowselect */
+{
+	background-image:url('../images/Browse/bg_Browse_over.gif');
+	background-repeat:repeat-x;
+	background-position:center bottom;
+	background-color:#E1EDF3;
+	padding: 4px;
+	font-size:8pt;
+	border-left: 1px solid #EDEDED;
+	border-bottom: 1px solid #EDEDED;
+	white-space:nowrap;
+    direction:ltr;    
+    cursor:pointer;
+}
+
+.cGridDataCell /*grid row*/
+{
+	background-color:White;
+	font-family:Tahoma;
+	font-size:8pt;
+	cursor:pointer;
+	padding: 4px;
+	border-left: 1px solid #EDEDED;
+	border-bottom: 1px solid #EDEDED;
+	white-space:nowrap;
+	direction:ltr;
+	
+}
+
+.cDataContainer
+{
+	width:100%;
+	background-color:White;
+	overflow-x:auto;
+    overflow-y:hidden;
+}
+
+/* *****************************************************************************     PAGER  */
+.pager {
+	height: 17px;
+	text-align:center;
+	margin: 0px auto;
+	direction:rtl;
+}
+.pager td{ padding:0 3px;}
+
+.pager ul 
+{
+	padding:0 5px 0 5px;
+	/*height: 27px;*/
+}
+.pager li {
+	margin-right: 5px;
+	float: right;
+	border:1px solid #eee;
+}
+.pager a {
+	padding:0 5px 0 5px;
+	/*width:17px;*/
+	line-height:17px;
+	text-align:center;
+	display: block;
+	border: 1px solid #ccc;
+}
+
+
+.pager span {padding:2px 5px 1px 5px;line-height:17px;text-align:center;display: block;	border: 1px solid #ccc;}
+.pager .current {
+	padding:0 0px 0 0px;
+	/*width:17px;*/
+	/*line-height:17px;*/
+	text-align:center;
+	display: block;
+	
+	background: #6ECBF0;
+}
+.pager a:hover {
+	padding:0 5px 0 5px;
+	background: #0098D4;
+	border: 1px solid #000;
+	color: #FFFFFF;
+}
+/* ***************************************************************************** EO PAGER   */
+.cMessageCell
+{
+    color:Black;
+	font-family:Tahoma;
+	font-size:8pt;
+	direction:rtl;
+	cursor:pointer;
+}
+
+.cPersianContent
+{
+	font-family:Tahoma;
+	font-size:8pt;
+	direction:rtl;
+	cursor:pointer;
+}
+
+
+.cHandPointer{cursor:pointer; vertical-align:top;}
+.cRefresh{width:22px;height:22px; background:url('../images/Browse/Refresh.gif') no-repeat; cursor:pointer;}
+.cFilterCancel{	width:22px;	height:22px;background:url('../images/Browse/Filter_cancel.gif') no-repeat;	cursor:pointer;}
+.cFilter{width:22px;height:22px; background-image:url('../images/Browse/Filter.gif');background-repeat:no-repeat;background-position:center;	cursor:pointer;}
+
+
+
+.cAddField{	background-image:url('../images/Browse/plus_icon.gif');	background-repeat:no-repeat;background-position:center;	width:19px;	height:18px;cursor:pointer;}
+
+
+.cBrowseDelete{	width:22px;	height:22px;background:url('../images/Browse/delete_icon.gif') no-repeat;cursor:pointer;}
+
+.cEdit
+{
+	width:23px;
+	height:19px;
+	background-image:url('../images/Browse/editicon2.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer;
+}
+
+.cBrowseNewRec
+{
+	width:52px;
+	height:20px;
+	background-image:url('../images/Browse/NewRec.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer;
+}
+
+table.ctblDataPaging /*for master browses*/
+{
+	background-color:White;
+	border: solid 1px #D5D5D5;
+}
+
+
+.cFooterPaging{background:url('../images/Browse/pagerBg.gif') repeat-x top #f1fbfe;text-align:center;direction:ltr;height:40px;}
+.cFooterPaging table{ margin:0 auto;}
+
+
+.cBrowseLabel
+{
+	text-align:center;
+	direction:rtl;
+	padding: 0 0 0 0;
+	background-image:url('../images/Browse/item-background.gif');
+	background-repeat:repeat-x;
+	/*background-color:#dddddd;*/
+	height:21px;
+	font-weight:bold;
+	width:100%;
+}
+
+.cLoading
+{
+	background-repeat:no-repeat;
+	width:100px;
+	height:100px;
+	background-image:url('../images/Browse/LoadingProgressBar.gif')
+}
+.cHiddenPanel {
+	DISPLAY: none; Z-INDEX: 100; POSITION: absolute;
+}
+
+.VisablePanel {display: block; z-index: 100; position:absolute; }
+
+.cLookupImage
+{
+    background-image:url('../images/Lookup/List.gif');
+	width:16px;
+	height:16px;
+    cursor:pointer;
+	
+}
+
+.cLookupTreeImage
+{
+    background-image:url('/images/Lookup/Tree.gif');
+	width:16px;
+	height:16px;
+    cursor:pointer;
+}
+
+.cLookupMainTable
+{
+    border-width:0px;
+    direction:ltr;
+}
+
+table.cLookupMainTable td
+{
+	vertical-align:top;
+}
+
+.cLookupTreeMainTable
+{
+    border-width:0px;
+    direction:ltr;
+}
+
+.cWin6LeftTop
+{
+	width:4px;
+	height:4px;
+	background-image:url('../images/Browse/Win6_01.gif');
+	background-repeat:no-repeat;
+}
+.cWin6RightTop
+{
+	width:4px;
+	height:4px;
+	background-image:url('../images/Browse/Win6_03.gif');
+	background-repeat:no-repeat;
+}
+.cWin6MiddleTop
+{
+	height:4px;
+	background-image:url('../images/Browse/Win6Top.gif');
+	background-repeat:repeat-x;
+}
+.cWin6LeftMiddle
+{
+	width:4px;
+	background-image:url('../images/Browse/Win6Left.gif');
+	background-repeat:repeat-y;
+}
+.cWin6RightMiddle
+{
+	width:4px;
+	background-image:url('../images/Browse/Win6Right.gif');
+	background-repeat:repeat-y;
+}
+.cWin6LeftBot
+{
+	width:4px;
+	height:3px;
+	background-image:url('../images/Browse/Win6_07.gif');
+	background-repeat:no-repeat;
+}
+.cWin6RightBot
+{
+	width:4px;
+	height:3px;
+	background-image:url('../images/Browse/Win6_09.gif');
+	background-repeat:no-repeat;
+}
+.cWin6MiddleBot
+{
+	height:4px;
+	background-image:url('../images/Browse/Win6Bottom.gif');
+	background-repeat:repeat-x;
+}
+
+.cHighlightedRow
+{
+	background-color:#3366CC;
+	color:White;
+}
+
+#LookupResults
+{
+	background-color:White;
+	border-left:solid 1px #111111;
+	border-right:solid 1px #111111;
+	border-bottom:solid 1px #111111;
+}
+.cMsg
+{
+	padding:4px 4px 4px 4px;
+}

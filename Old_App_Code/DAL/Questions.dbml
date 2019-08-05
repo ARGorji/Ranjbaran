@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ranjbaran" Class="QuestionsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Ranjbaran;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RanjbaranConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.vQuestionsFull" Member="vQuestionsFulls">
+    <Type Name="vQuestionsFull">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ques" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AskerUser" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="SDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCQuestionStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Questions" Member="Questions">
+    <Type Name="Questions">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ques" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SendDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublicationCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCQuestionStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vQuestions" Member="vQuestions">
+    <Type Name="vQuestions">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ques" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AskerUser" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="SDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,106 @@
+.RadTreeView_Outlook,
+.RadTreeView_Outlook a.rtIn,
+.RadTreeView_Outlook .rtEdit .rtIn input
+{
+	color: #000;
+	font: 12px/18px tahoma;
+}
+
+.RadTreeView_Outlook .rtPlus, 
+.RadTreeView_Outlook .rtMinus
+{
+	background-image: url('/images/TreeView/PlusMinus.png');
+}
+
+.RadTreeView_Outlook .rtChecked,
+.RadTreeView_Outlook .rtUnchecked,
+.RadTreeView_Outlook .rtIndeterminate
+{
+	background-image: url('/images/TreeView/TriState.png');
+}
+
+.RadTreeView_Outlook .rtHover .rtIn
+{
+	border-color: #002d96;
+	background-color: #fff3ca;
+	background-image: url('/images/TreeView/ItemHoveredBg.png');
+}
+
+.RadTreeView_Outlook .rtSelected .rtIn
+{
+	border-color: #002d96;
+	background-color: #dceafc;
+	background-image: url('/images/TreeView/ItemSelectedBg.png');
+}
+
+.RadTreeView_Outlook .rtSelected .rtLoadingBefore,
+.RadTreeView_Outlook .rtSelected .rtLoadingAfter,
+.RadTreeView_Outlook .rtSelected .rtLoadingBelow
+{
+	color: #333;
+}
+
+.RadTreeView_Outlook .rtLoadingIcon
+{
+	background-image: url('/images/TreeView/LoadingIcon.gif');
+}
+
+.RadTreeView_Outlook .rtLI .rtEdit .rtIn
+{
+	border-color: #0f3789;
+	background: #fff;
+}
+
+.RadTreeView_Outlook_disabled .rtIn,
+.RadTreeView_Outlook .rtDisabled .rtIn
+{
+	color: #ccc;
+}
+
+
+/* <node lines> */
+
+.RadTreeView_Outlook .rtLines .rtLI,
+.RadTreeView_Outlook .rtLines .rtFirst .rtUL { background-image: url('/images/TreeView/Common/NodeSpan.png'); }
+.RadTreeView_Outlook_rtl .rtLines .rtLI,
+.RadTreeView_Outlook_rtl .rtLines .rtFirst .rtUL { background-image:url('/images/TreeView/Common/NodeSpan_rtl.png'); }
+
+.RadTreeView_Outlook .rtLines .rtFirst,
+.RadTreeView_Outlook .rtLines .rtFirst .rtUL { background-image: url('/images/TreeView/Common/FirstNodeSpan.png'); }
+.RadTreeView_Outlook_rtl .rtLines .rtFirst,
+.RadTreeView_Outlook_rtl .rtLines .rtFirst .rtUL { background-image: url('/images/TreeView/Common/FirstNodeSpan_rtl.png'); }
+.RadTreeView_Outlook .rtLines .rtLast,
+.RadTreeView_Outlook .rtLines .rtLast .rtUL { background-image: none; }
+
+.RadTreeView_Outlook .rtLines .rtTop { background-image:url('/images/TreeView/Common/TopLine.png'); }
+.RadTreeView_Outlook_rtl .rtLines .rtTop { background-image:url('/images/TreeView/Common/TopLine_rtl.png'); }
+.RadTreeView_Outlook .rtLines .rtMid { background-image:url('/images/TreeView/Common/MiddleLine.png'); }
+.RadTreeView_Outlook_rtl .rtLines .rtMid { background-image:url('/images/TreeView/Common/MiddleLine_rtl.png'); }
+.RadTreeView_Outlook .rtLines .rtBot { background-image:url('/images/TreeView/Common/BottomLine.png'); }
+.RadTreeView_Outlook_rtl .rtLines .rtBot { background-image: url('/images/TreeView/Common/BottomLine_rtl.png'); }
+.RadTreeView_Outlook .rtLines .rtLast .rtTop { background-image:url('/images/TreeView/Common/SingleLine.png'); }
+.RadTreeView_Outlook_rtl .rtLines .rtLast .rtTop { background-image:url('/images/TreeView/Common/SingleLine_rtl.png'); }
+
+/* </node lines> */
+
+
+/* First level nodes: 
+RadTreeView .rtUL {color:Red;}
+RadTreeView .rtUL div {color:Red;}*/
+
+/* Second level nodes: */
+.RadTreeView .rtUL .rtLI {color:blue;}
+.RadTreeView .rtUL .rtUL div {color:green;}
+
+/* Third level nodes:
+.RadTreeView .rtUL .rtUL .rtLI {color:Maroon;}*/
+.RadTreeView .rtUL .rtUL .rtUL div {color:Maroon;}
+
+
+
+.RadTreeView_rtl .rtUL .rtLI .rtUL {
+padding-left:0;
+padding-right:50px !important; 
+}
+
+ul.rtLines{ padding:25px !important;}

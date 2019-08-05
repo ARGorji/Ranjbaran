@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Edit" Codebehind="Edit.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>حقوق</title>
+    <link id="Link1" runat="server" href="~/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+    <link id="Link2" runat="server" href="~/Admin/styles/lightbox.css" rel="stylesheet" type="text/css"
+        media="screen" />
+
+    <script type="text/javascript" language="javascript">
+        function OnClicking(sender, eventArgs) {
+            if (eventArgs.Item.Value != "") {
+                ShowMode = "Browse"
+                document.location.href = '../Main/Default.aspx?BaseID=' + eventArgs.Item.Value
+                return false;
+            }
+        }
+        function HandleKeypress() {
+            //alert(event.keyCode);
+            var IsKeyCodeCaptured = false;
+            switch (event.keyCode) {
+                case 113: //F2 key (SAVE)
+                    document.getElementById("ctl00_cphMain_imgBtnSave").click();
+                    IsKeyCodeCaptured = true;
+                    break;
+                case 114: //F3 key (DELETE)
+                    document.getElementById("imgBtnDeleteDown").click();
+                    IsKeyCodeCaptured = true;
+                    break;
+
+            }
+            if (IsKeyCodeCaptured) {
+                event.keyCode = 0;
+                event.returnValue = false;
+                event.cancelBubble = true;
+                return false;
+            }
+
+        }
+    </script>
+
+</head>
+
+<script language="javascript" type="text/javascript">
+    BrowseObj1.ViewEdit = 'Edit'
+    BrowseObj2.ViewEdit = 'Edit'
+    BrowseObj3.ViewEdit = 'Edit'
+    BrowseObj4.ViewEdit = 'Edit'
+
+</script>
+
+<body style="margin: 0 0 0 0;" onkeydown="HandleKeypress()">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="wrapper1">
+        <div class="cMainEdit">
+            <div>
+                <table style="direction:ltr;" cellpadding="0" cellspacing="0" width="950" align="center">
+                <tr>
+                    <td id="TDMain" class="cTblMainEdit">
+                        <table cellpadding="0" cellspacing="0" width="903" align="center">
+                            <tr>
+                                <td id="TDMainTD" class="cTblMainTD">
+                                    <table cellpadding="0" cellspacing="0" width="97%" align="center">
+                                        <tr id="TopHeader">
+                                            <td style="width: 610px; vertical-align: bottom">
+                                                <table cellpadding="0" cellspacing="0" width="581" align="center">
+                                                    <tr>
+                                                        <td class="cPanelLeft">
+                                                            <asp:Image ID="Image11" runat="server" ImageUrl="~/Admin/images/spacer.gif" />
+                                                        </td>
+                                                        <td class="cPanelMiddle">
+                                                            <div style="width: 560px;">
+                                                                <div style="width: 300px; float: left;">
+                                                                    <table cellpadding="0" cellspacing="0" align="left">
+                                                                        <tr>
+                                                                            <td style="width: 30px;" class="cLogout">
+                                                                                <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Admin/Logout.aspx" runat="server"><asp:Image ID="Image1" runat="server" Width="30" Height="21" ImageUrl="~/Admin/images/spacer.gif" /></asp:HyperLink>
+                                                                            </td>
+                                                                            <td class="cVerBar1">
+                                                                                <asp:Image ID="Image21" runat="server" ImageUrl="~/Admin/images/spacer.gif" />
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:Label runat="server" ID="lblPersianDate"></asp:Label>
+                                                                            </td>
+                                                                            <td class="cVerBar1">
+                                                                                <asp:Image ID="Image31" runat="server" ImageUrl="~/Admin/images/spacer.gif" />
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:Label runat="server" ID="lblTime"></asp:Label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:Image ID="Image41" runat="server" ImageUrl="~/Admin/images/spacer.gif" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div style="width: 100px; float: right; text-align: right; vertical-align: middle;">
+                                                                    <asp:Label ID="Label1" runat="server" Text="خوش آمدید"></asp:Label>&nbsp;<asp:Label
+                                                                        ID="lblFullName" runat="server"></asp:Label>&nbsp;<asp:Label ID="lblGender" runat="server"></asp:Label>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="cPanelRight">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class="cLogo">
+                                                <asp:HyperLink runat="server" ID="hplHome" NavigateUrl="~/Admin/"><asp:Image ID="Image2" CssClass="cLogo2" runat="server" ImageUrl="~/Admin/images/spacer.gif" /></asp:HyperLink>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="height: 21px; vertical-align: top;" align="center">
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td style="vertical-align: top;">
+                                                            <div onclick="ShowHideTop()" class="cToggleBut">
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            <div style="text-align: right; width: 800px;">
+                                                                <telerik:RadMenu ID="RadMenu1" runat="server" Skin="Vista" EnableViewState="false"
+                                                                    EnableAutoScroll="True" dir="rtl" OnClientItemClicking="OnClicking">
+                                                                </telerik:RadMenu>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="cEditPage">
+                <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div>
+                <div class="cDivSep">
+                </div>
+                <div class="cBrowseArea" id="DisplayArea">
+                </div>
+                <div class="cDivSep">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

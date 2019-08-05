@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" Inherits="Main" CodeBehind="Main.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>وبسایت شخصی هادی رنجبران</title>
+    <link runat="server" href="~/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+    <link runat="server" href="~/Admin/Styles/PersianDate.css" rel="stylesheet" type="text/css" />
+    <link runat="server" href="~/Admin/Styles/Browse.css" rel="stylesheet" type="text/css" />
+    <link runat="server" href="~/Admin/Styles/TreeView.Outlook.css" rel="stylesheet"
+        type="text/css" />
+    <link runat="server" href="~/Admin/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" language="javascript">
+
+        function HandleKeypress() {
+            //alert(event.keyCode);
+            var IsKeyCodeCaptured = false;
+            switch (event.keyCode) {
+                case 113: //F2 key (SAVE)
+                    objbtn = document.getElementById("cphMain_imgBtnSave")
+                    if(objbtn != null)
+                        objbtn.click();
+                    IsKeyCodeCaptured = true;
+                    break;
+                case 114: //F3 key (DELETE)
+                    objbtn = document.getElementById("imgBtnDeleteDown");
+                    if (objbtn != null)
+                        objbtn.click();
+                    IsKeyCodeCaptured = true;
+                    break;
+                case 115: //F4 key (BACK)
+                    objbtn = document.getElementById("ctl00_cphMain_imgBtnBack");
+                    if (objbtn != null)
+                        objbtn.click();
+                    IsKeyCodeCaptured = true;
+                    break;
+                case 116: //F5 key (Change Language)
+                    objbtn = document.getElementById("imgBtnLang");
+                    if (objbtn != null)
+                        objbtn.click();
+                    IsKeyCodeCaptured = true;
+                    break;
+                case 117: //F6 key (View Mode)
+                    objbtn = document.getElementById("ctl00_cphMain_hplView");
+                    if (objbtn != null)
+                        objbtn.click();
+                    IsKeyCodeCaptured = true;
+                    break;
+
+            }
+            if (IsKeyCodeCaptured) {
+                event.keyCode = 0;
+                event.returnValue = false;
+                event.cancelBubble = true;
+                return false;
+            }
+
+        }
+    </script>
+
+</head>
+<body onkeydown="HandleKeypress()">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="wrap">
+        <div class="header">
+            <div class="banner">
+                <asp:HyperLink ID="imgBanner" NavigateUrl="~/Admin/Main/Panel.aspx" runat="server" ImageUrl="~/Admin/images/AdminHeader.jpg"
+                    alt="" /></div>
+        </div>
+        <br class="clearfloat" />
+        <br class="clearfloat" />
+        <div class="container">
+            <div class="main">
+                <h1 class="title">
+                    <asp:Label runat="server" ID="lblTitle" Text="" /></h1>
+                <div class="pageBody">
+                    <div class="LeftCol">
+                        <div class="MainInner">
+                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="cBrowseArea" id="DisplayArea">
+                        </div>
+                    </div>
+                    <div class="RightCol">
+                        <div class="btnMainPage">
+                            <asp:HyperLink runat="server" Text="صفحه اصلی" NavigateUrl="~/Admin/Main/Panel.aspx"></asp:HyperLink>
+                        </div>
+                        <div>
+                            <TelerikUC:RadMenu runat="server" ID="radmenu" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <asp:Image ID="Image5" runat="server" ImageUrl="~/Admin/images/spacer.gif" />
+            </div>
+        </div>
+        <div class="homeLable">
+            <div style="float: right">
+                <asp:HyperLink ID="Image1" Width="25px" ToolTip="خروج از سامانه" runat="server" ImageUrl="~/Admin/images/Site/logout.gif"
+                    NavigateUrl="~/Admin/logout.aspx" />
+            </div>
+            <div>
+                کاربر :
+                <asp:Label runat="server" ID="lblFullName"></asp:Label>
+                <br />
+            </div>
+        </div>
+        <div class="homeLable">
+            <span id="ctl00_lblFooter1">&copy; تمامی حقوق این سایت محفوظ می باشد. </span>
+            <br />
+            <span id="ctl00_lblFooter2">طراحی و پیاده سازی:</span> <a href="http://parset.com"
+                target="_blank" id="ctl00_HyperLink5">شرکت پیشرو عصر دانش</a>
+        </div>
+        <div class="homeLable">
+        </div>
+        <br class="clearfloat" />
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ranjbaran" Class="CoursesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Ranjbaran;Persist Security Info=True;User ID=sa;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RanjbaranConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CourseDays" Member="CourseDays">
+    <Type Name="CourseDays">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CourseCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCDayCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Courses_CourseDays" Member="Courses" ThisKey="CourseCode" OtherKey="Code" Type="Courses" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vCourseDays" Member="vCourseDays">
+    <Type Name="vCourseDays">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CourseCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseUsers" Member="CourseUsers">
+    <Type Name="CourseUsers">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CourseCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Courses_CourseUsers" Member="Courses" ThisKey="CourseCode" OtherKey="Code" Type="Courses" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Courses" Member="Courses">
+    <Type Name="Courses">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DurationLen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HCGradeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCStudyFieldCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HCMainFieldCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayTime" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Courses_CourseDays" Member="CourseDays" ThisKey="Code" OtherKey="CourseCode" Type="CourseDays" />
+      <Association Name="Courses_CourseUsers" Member="CourseUsers" ThisKey="Code" OtherKey="CourseCode" Type="CourseUsers" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vCourses" Member="vCourses">
+    <Type Name="vCourses">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DurationLen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GradeName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UserCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HCGradeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCStudyFieldCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ETime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MainField" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HCMainFieldCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayTime" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vCourseUsers" Member="vCourseUsers">
+    <Type Name="vCourseUsers">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CourseCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StudyField" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

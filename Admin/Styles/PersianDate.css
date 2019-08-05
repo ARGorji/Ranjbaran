@@ -1,0 +1,68 @@
+﻿.cDateFa
+{
+	background-image:url('../images/Date/FA.gif');
+	width:14px;
+	height:15px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.cDateEn
+{
+	background-image:url('../images/Date/En.gif');
+	width:14px;
+	height:15px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.cHiddenDate
+{
+	display:none;
+	position:absolute;
+	z-index:100;
+}
+table.PersTD td
+{
+	font-family:Tahoma;
+	font-size:8pt;
+	direction:rtl;
+}
+.cCalBut
+{
+	height:14px;
+	width :14px;
+	cursor:pointer;
+}
+.cPersian2
+{
+	font-family:Tahoma;
+	font-size:10pt;
+}
+.cImage
+{
+	cursor:pointer;
+}
+.cDateImg 
+{
+	vertical-align:top;
+	float: right;
+	width: 24px;
+	cursor:pointer;
+	padding:0 0 0 2px;
+}
+.cDateInnerImage {background-image:url('../images/Date/Date.gif');	width:24px;	height:24px;	background-repeat:no-repeat;}
+.cDate
+{
+	width:45pt;
+	direction:ltr;
+	BORDER: 1px #999999 solid;
+	font-family : tahoma;
+	font-size : 11px;
+	color : #000000;
+	z-index:999;
+	margin-top:3px;
+}
+.cHidden
+{
+	visibility:hidden;
+	display:none;
+}

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ranjbaran" Class="ExamsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Ranjbaran;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RanjbaranConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Exams" Member="Exams">
+    <Type Name="Exams">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="HCGradeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCStudyFieldCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PDFFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Lesson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Free" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCLessonCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vExams" Member="vExams">
+    <Type Name="vExams">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GradeName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StudyName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Free" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCGradeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCStudyFieldCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCLessonCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lesson" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

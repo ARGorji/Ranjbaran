@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Publications">
+  <DataContextMoniker Name="/PublicationsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cf98ec82-a5e8-4aca-8e74-76d6382260b3" absoluteBounds="3.5, 1.625, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/PublicationsDataContext/PublicationGroups" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df5888ea-717b-464d-9591-5764ca6395f9" absoluteBounds="3.515, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cda156fd-271e-44a5-b00d-22ac51966f03" isExpanded="false" absoluteBounds="3.5, 3, 2, 0.45">
+      <DataClassMoniker Name="/PublicationsDataContext/vPublicationGroups" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e18212a-9bd1-41a7-9dd2-5a9b21a4f871" absoluteBounds="3.515, 3.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51ae8962-61e2-4f9c-b804-dc6fdf3e21f2" absoluteBounds="0.5, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/PublicationsDataContext/Publications" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29b2f870-95fa-4030-ba0b-47b9a36960f5" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 2.31814697265625); (3.5 : 2.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PublicationsDataContext/Publications/Publication_PublicationGroups" />
+      <nodes>
+        <classShapeMoniker Id="51ae8962-61e2-4f9c-b804-dc6fdf3e21f2" />
+        <classShapeMoniker Id="cf98ec82-a5e8-4aca-8e74-76d6382260b3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="178875f4-60ab-4b60-8914-18e83460f226" isExpanded="false" absoluteBounds="0.5, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/PublicationsDataContext/vPublications" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa0b93c1-d912-4298-8813-58a6fb5c5e98" absoluteBounds="0.51499999999999968, 4.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

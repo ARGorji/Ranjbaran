@@ -1,0 +1,65 @@
+
+.RadEWrongWord
+{
+	background-color: yellow;
+}
+
+.RadEDomMouseOver
+{
+	background-color: #efefef;
+	border: 1px dashed red;
+}
+
+body
+{
+  background-color: red;
+  background-image: url(image_path);
+  color: black;
+} 
+
+.RadEContent, .RadEContentBordered
+{
+    font-family:Tahoma;
+	/*color: black;*/
+	padding: 3px;
+	background-image: none;
+	margin: 0px;
+	text-align: right;
+	direction: rtl;
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;
+	word-wrap: break-word;
+}
+
+.RadEContentBordered form
+{
+	background-color: #efefef;
+	border: 1px dashed #555555;
+}
+/* CSS class for A name */
+
+.RadEContentBordered table
+{
+	border-right: #999999 1px dashed;
+	border-bottom: #999999 1px dashed;
+}
+
+.RadEContentBordered table td
+{
+	padding: 1px;
+	border-top: #999999 1px dashed;
+	border-left: #999999 1px dashed;
+}
+
+.RadEContentBordered table th
+{
+	padding: 1px;
+	border-top: #000000 1px dashed;
+	border-left: #000000 1px dashed;
+}
+

@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Admin_EditPopup" CodeBehind="EditPopup.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Edit Popup</title>
+    <link id="Link1" runat="server" href="~/Admin/styles/main.css" rel="stylesheet" type="text/css" />
+    <link id="Link2" runat="server" href="~/Admin/styles/Browse.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript">
+        function OnClicking(sender, eventArgs) {
+            if (eventArgs.Item.Value != "") {
+                ShowMode = "Browse"
+                document.location.href = '../Main/Default.aspx?BaseID=' + eventArgs.Item.Value
+                return false;
+            }
+        }
+        function HandleKeypress() {
+            //alert(event.keyCode);
+            //    var IsKeyCodeCaptured = false;
+            //    switch(event.keyCode)
+            //    {
+            //        case 113: //F2 key (SAVE)
+            //            document.getElementById("ctl00_cphMain_imgBtnSave").click();
+            //            IsKeyCodeCaptured = true;
+            //            break;
+            //        case 114: //F3 key (DELETE)
+            //            document.getElementById("imgBtnDeleteDown").click();
+            //            IsKeyCodeCaptured = true;
+            //            break;
+            //        case 115: //F4 key (BACK)
+            //            document.getElementById("ctl00_cphMain_imgBtnBack").click();
+            //            IsKeyCodeCaptured = true;
+            //            break;
+
+            //            
+            //    }
+            //    if (IsKeyCodeCaptured)
+            //    {
+            //       event.keyCode = 0;
+            //       event.returnValue = false;
+            //       event.cancelBubble = true;
+            //       return false;
+            //    }
+            //    
+        }
+    </script>
+</head>
+<body class="cBodyPopup" onkeydown="HandleKeypress()">
+    <form id="form1" runat="server">
+    <asp:Literal ID="ltrHeaderScript" runat="server"></asp:Literal>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="wrapPopup">
+        <div class="cTblEditPopup">
+            <div class="cPopupLable">
+                <asp:Label ID="lblTitle" runat="server"></asp:Label>
+            </div>
+            <div class="cTDEditPopup">
+                <div class="cInnerpopup">
+                    <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MainMaster" CodeBehind="MainMaster.master.cs" %>
+
+<%@ Register Src="~/UserControls/Login.ascx" TagName="Login" TagPrefix="LG" %>
+<%@ Register Src="~/UserControls/UCMenu.ascx" TagName="UCMenu" TagPrefix="UCM" %>
+<%@ Register Src="~/UserControls/UCLinks.ascx" TagName="UCLinks" TagPrefix="UCL" %>
+<%@ Register Src="~/UserControls/Banner.ascx" TagName="Banner" TagPrefix="UCB" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>صفحه اصلی</title>
+    <meta id="description" name="description" runat="server" content="وبسایت شخصی هادی رنجبران" />
+    <meta id="keywords" name="keywords" runat="server" content="وبسایت شخصی هادی رنجبران" />
+    <link id="lnkBoorstrapCSS" runat="server" href="~/Styles/bootstrap.css" rel="stylesheet"
+        type="text/css" />
+    <link id="lnkMainCSS" runat="server" href="~/Styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="http://www.hadiranjbaran.com/favicon.ico" />
+    <link id="Link1" runat="server" rel="stylesheet" href="~/Styles/fontawesome.css" />
+
+    <!--[if IE 8]> <link rel="stylesheet" type="text/css" href="http://www.hadiranjbaran.com/Styles/settings-ie8.css"> <![endif]-->
+    <!--[if LT IE 9]><link id="IE6Minus" rel="stylesheet" type="text/css" href="http://www.hadiranjbaran.com/Styles/ie.css" /><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://www.hadiranjbaran.com/Scripts/html5.js"></script>
+    <script src="http://www.hadiranjbaran.com/Scripts/respond.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.hadiranjbaran.com/Styles/ie8_rtl.css" />
+    <![endif]-->
+</head>
+<body>
+    <asp:Literal ID="ltrMP" runat="server"></asp:Literal>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div class="container">
+            <div class="TopHeader1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <asp:HyperLink ID="HyperLink3" runat="server">
+                            <asp:Image ID="Image1" ImageUrl="~/images/SiteLogo.jpg" runat="server" />
+                        </asp:HyperLink>
+                    </div>
+                    <div class="col-lg-6 col-md-3">
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-3 ">
+                        <asp:Panel runat="server" ID="pnlUserLogin" CssClass="HeaderData">
+                            <div class="row">
+                                <div class="col-6 text-left">
+                                    <asp:HyperLink ID="HyperLink4" CssClass="btn btn-danger" Width="100" NavigateUrl="~/Users/Register.aspx" runat="server">عضویت</asp:HyperLink>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <asp:HyperLink ID="hplLogin" CssClass="btn btn-danger" Width="100" NavigateUrl="~/Users/Login.aspx" runat="server">ورود</asp:HyperLink>
+                                </div>
+                            </div>
+
+                        </asp:Panel>
+                        <asp:Panel ID="pnlLoggedUser" CssClass="HeaderData" Visible="false" runat="server">
+                            [ خوش آمدید
+                <asp:Label ID="lblUserInfo" runat="server" Text=""></asp:Label>
+                            <asp:HyperLink NavigateUrl="~/Users/UserPanel.aspx" ID="hplUserInfo" runat="server"
+                                Text="">صفحه شخصی
+                            </asp:HyperLink>
+                            &nbsp;
+                <asp:HyperLink ID="HyperLink2" NavigateUrl="~/Users/Logout.aspx" runat="server">خروج</asp:HyperLink>
+                            ]
+                        </asp:Panel>
+                        <div class="TimeCont">
+                            <div>
+                                <asp:Label ID="lblTime" runat="server" Text=""></asp:Label>
+                                &nbsp;-&nbsp;
+                    <asp:Label ID="ltrPersianDate" runat="server" Text=""></asp:Label>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="Clear">
+            </div>
+            <div class="DynaMenuCont">
+                <UCM:UCMenu runat="server" />
+            </div>
+
+            <div class="Clear">
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="CP1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="Clear">
+            </div>
+            <div id="footer">
+                <ul class="nav pull-right">
+                    <li>تمامی حقوق این سایت متعلق به <span style="color: #FFFF00;">انتشارات اثبات </span>
+                        بوده و هرگونه استفاده سوء از آن غیر مجاز می باشد</li>
+                    <li>
+                        <!-- Begin WebGozar.com Counter code -->
+                        <script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3309873&amp;t=counter"></script>
+                        <noscript>
+                            <a href="http://www.webgozar.com/counter/stats.aspx?code=3309873" target="_blank">&#1570;&#1605;&#1575;&#1585;</a>
+                        </noscript>
+                        <!-- End WebGozar.com Counter code -->
+                    </li>
+                </ul>
+                <div class="Clear">
+                </div>
+            </div>
+        </div>
+        <div id="help" class="modal fade" style="display: none">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;</button>
+                        <h4 class="modal-title">راهنما</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table align="center" cellpadding="3" cellspacing="0" dir="rtl" class="tbWide">
+                            <tr>
+                                <td colspan="2">
+                                    <div id="helpText" align="right" style="text-align: justify; line-height: 20px;">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: block;" id="backtotop">
+            <a href="#">
+                <img border="0"  src="/images/back2up.png" alt="بازگشت با بالای صفحه" />
+            </a>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Util">
+  <DataContextMoniker Name="/UtilDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ba029e07-ee6a-4a3f-b7c2-6c0a6f6c1106" absoluteBounds="7, 1.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/UtilDataContext/SearchedKeywords" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7edb568-d112-4c03-b7ef-45c47dbe61d7" absoluteBounds="7.015, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="039cfe76-5e74-4947-9f41-224bf0fe5113" absoluteBounds="4.75, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/UtilDataContext/EmailTemplates" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f27fe5f-bcf9-4ecf-a719-8c632218d551" absoluteBounds="4.765, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1a0d3e4-891c-44ca-a163-a0beb9fbe516" absoluteBounds="0.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/UtilDataContext/UserItemComments" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0321ee4c-4602-4352-8cb8-9c8da96fcf87" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1664d285-f885-4849-8c29-40d8885361a6" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/UtilDataContext/UserItemLikes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="041267fa-3f46-4b72-9e32-b2d98396e1c5" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e3c19a9-7e9d-49b1-866f-b931ebe2f99e" isExpanded="false" absoluteBounds="0.75, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/UtilDataContext/vUserItemComments" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7d30993-ca70-4cf5-ba62-2b603947b48a" absoluteBounds="0.76500000000000012, 3.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a68fcbc-fd5f-4644-9bc0-b6574d628509" absoluteBounds="4.75, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/UtilDataContext/IPToCountries" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a05e8fd5-0c63-492c-9e2f-27a7cf1fafda" absoluteBounds="4.765, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

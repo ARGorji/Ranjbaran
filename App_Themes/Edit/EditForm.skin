@@ -1,0 +1,26 @@
+﻿<asp:TextBox runat="server" onkeypress="FaKeyPress()" CssClass="cInput"></asp:TextBox>
+<asp:TextBox runat="server" SkinID="English" CssClass="cEngInput"></asp:TextBox>
+
+<AKP:ExTextBox runat="server" lang="fa" CssClass="cInput" />
+<AKP:ExTextBox runat="server" SkinID="English" dir="ltr"  CssClass="cEngInput" />
+<asp:TextBox SkinID="Time" onkeypress="return IsOnlyTime()" onclick="TimeFocus(this)" onselect="TimeFocus(this)" onchange="TimeValidation(this)" runat="server" style="BORDER: 1px #999999 solid;font-family : tahoma;font-size : 11px;color : #000000;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);z-index:999;filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FFFFFF,endColorStr=#efefef);"></asp:TextBox>
+
+<asp:LinkButton SkinID="SaveButton" AlternateText=" ذخیره " runat="server" CssClass="SaveButton" />
+<asp:LinkButton SkinID="BackButton" AlternateText=" بازگشت "  runat="server" CssClass = "BlueButton"  />
+
+<asp:Label runat="server" />
+<asp:Label SkinID="Caption" runat="server" style="FONT-SIZE: 8pt;font-weight:bold; FONT-FAMILY: tahoma;direction:rtl;" />
+<asp:Label SkinID="Mandatory" runat="server" style="FONT-SIZE: 8pt;color:Red; FONT-FAMILY: tahoma;direction:rtl;" />
+
+
+
+<asp:ImageButton SkinID="SaveButton" AlternateText="(F2) ذخیره" runat="server" CssClass = "cHand" ImageUrl="~/Admin/Images/buttons/btn_save.gif" />
+<asp:ImageButton SkinID="BackButton" AlternateText="(F4) بازگشت به لیست"  runat="server" CssClass = "cHand" ImageUrl="~/Admin/Images/buttons/btn_back.gif" />
+
+<asp:DropDownList runat="server" Font-Names="Tahoma" Font-Size="8pt" />
+
+<asp:RadioButton runat="server" Font-Names="Tahoma" Font-Size="8pt" />
+<asp:RadioButtonList runat="server" Font-Names="Tahoma" Font-Size="8pt" />
+
+<AKP:ExCheckBox runat="server" Font-Names="Tahoma" Font-Size="8pt" />
+

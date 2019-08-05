@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ranjbaran" Class="OrdersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Ranjbaran;Persist Security Info=True;User ID=sa;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RanjbaranConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Orders">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HCGenderCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProvinceCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HCSendTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SendPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherCosts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalProductPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalOrderCost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCOrderStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayeganOrderCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PostOrderCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HCOrderPayStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCPayMethodCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyCost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RefUserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RefPayed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserTransactionCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Orders_OrderProducts" Member="OrderProducts" ThisKey="Code" OtherKey="OrderCode" Type="OrderProducts" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderProducts" Member="OrderProducts">
+    <Type Name="OrderProducts">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SendPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCProductOrderStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Orders_OrderProducts" Member="Orders" ThisKey="OrderCode" OtherKey="Code" Type="Orders" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vOrderProducts" Member="vOrderProducts">
+    <Type Name="vOrderProducts">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ProductStatus" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnTitle" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vOrders" Member="vOrders">
+    <Type Name="vOrders">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OrderStatus" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="HCOrderStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SendPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherCosts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalOrderCost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyCost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SendType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PostOrderCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PayeganOrderCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserTransactionCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCTransStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCPayMethodCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderPayStatus" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

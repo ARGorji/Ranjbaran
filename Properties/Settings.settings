@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ranjbaran.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Ranjbaran_ParsianBankWS_EShopService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pec.shaparak.ir/NewIPGServices/Sale/SaleService.asmx</Value>
+    </Setting>
+    <Setting Name="Ranjbaran_ir_shaparak_pec_SaleService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pec.shaparak.ir/NewIPGServices/Sale/SaleService.asmx</Value>
+    </Setting>
+    <Setting Name="Ranjbaran_ir_shaparak_pec1_ConfirmService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pec.shaparak.ir/NewIPGServices/Confirm/ConfirmService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

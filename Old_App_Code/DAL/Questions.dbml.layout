@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Questions">
+  <DataContextMoniker Name="/QuestionsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="707cd213-bc0c-4cfa-b2c0-7e34e0d80470" absoluteBounds="2.875, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QuestionsDataContext/vQuestionsFull" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dda5cdab-134d-44b9-ba59-142fede351c1" absoluteBounds="2.8899999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="343d6689-665b-4358-b437-c08d0b351cce" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QuestionsDataContext/Questions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d18af030-7f33-4e78-b9b1-956d1420aad1" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c737ec78-6711-4ed4-b0f3-588712db46b6" absoluteBounds="0.5, 2.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QuestionsDataContext/vQuestions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f17724e-a73c-449e-8a77-7021e9ff5f57" absoluteBounds="0.51499999999999968, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
